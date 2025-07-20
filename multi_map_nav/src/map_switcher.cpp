@@ -1,6 +1,5 @@
 #include "multi_map_nav/map_switcher.h"
 
-
 MapSwitcher::MapSwitcher() : nh_()
 {
     nh_.param<std::string>("map_folder", map_folder_,
