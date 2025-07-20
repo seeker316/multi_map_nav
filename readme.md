@@ -52,13 +52,13 @@ Handles switching between maps by launching a new map_server.
 
 `NavigationServer.cpp` :
 Implements the action server that handles multi-map navigation.
-- Starts an action server for the navigate_to_goal action.
-- If the goal is on the current map, the robot navigates directly using move_base.
-- If on a different map, the server:
-    - Finds a wormhole via WormholeManager.
-    - Navigates to the wormhole, switches maps, and continues to the goal.
-    - Falls back to a two-step transition via map1 if no direct wormhole exists.
-- Uses MapSwitcher to change maps and manages navigation flow and result feedback.
+    - Starts an action server for the navigate_to_goal action.
+    - If the goal is on the current map, the robot navigates directly using move_base.
+    - If on a different map, the server:
+        - Finds a wormhole via WormholeManager.
+        - Navigates to the wormhole, switches maps, and continues to the goal.
+        - Falls back to a two-step transition via map1 if no direct wormhole exists.
+    - Uses MapSwitcher to change maps and manages navigation flow and result feedback.
 
 `set_Action.cpp` :
 A command-line ROS action client for sending navigation goals.
