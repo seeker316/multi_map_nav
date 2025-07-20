@@ -1,0 +1,16 @@
+base_global_planner: "navfn/NavfnROS"
+base_local_planner: "base_local_planner/TrajectoryPlannerROS"
+
+planner_frequency: 1.0
+controller_frequency: 10.0
+
+recovery_behavior_enabled: true
+clearing_rotation_allowed: true
+
+NavfnROS:
+  allow_unknown: true
+
+TrajectoryPlannerROS:
+  max_vel_x: 0.5
+  min_vel_x: 0.1
+  max_rotational_vel: 1.0
